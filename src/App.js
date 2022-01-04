@@ -21,7 +21,7 @@ function Heder() {
       <>
         <h3>Список слов</h3>
         <WordList/>
-        <Card {...data[1]}/>
+        <Card {...data[0]}/>
       </>
     );
     }
