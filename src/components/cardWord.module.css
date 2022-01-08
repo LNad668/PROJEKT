@@ -1,0 +1,12 @@
+
+.cardWord {
+    width: 150px;
+    height: 300px;
+    margin: 5px;
+    border: rgb(173, 115, 221) solid 3px;
+    border-radius: 20px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+
+  }

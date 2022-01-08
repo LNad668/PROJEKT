@@ -1,20 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
-import data from './word/data';
 import { isEditable } from '@testing-library/user-event/dist/utils';
+import Heder from './components/heder';
+import Footer from './components/footer';
+import Card from './components/cardWord';
+import data from './components/data';
+import WordList from './components/wordList';
 
-
-function Heder() {
-  return (
-  <>
-  <a href='#'>Список слов </a>
-  <a href='#'>Тренировка </a>
-  <a href='#'>Список по теме </a>
-
-  <h1>Заголовок Сайта </h1>
-  </>
-  );
-}
+import { useState } from 'react';
 
   function Main() {
     return (
@@ -26,35 +19,29 @@ function Heder() {
     );
     }
 
-function Footer() {
-  return (
-  <>
-  <footer>
-    <h2>Это футер</h2>
-    </footer>
-  </>
-  );
+
+
+/*function Word ({ word, transcription, translation, topic}){
+  const [isEditable, chengeEditable] = useState(false); 
+
+  function onClik(){
+    chengeEditable (true);
+  }
+  function onClick2(){
+    chengeEditable(false)
   }
 
-function Card({word,transcription,translation,topic, }) {
-  let isFront = false;
-  if (isFront){
-    return <div>{word}</div>;
-  } else {
-    return <div>{translation}  {transcription}</div> ;
-  }
-  }
-function Word ({ word, transcription, translation, topic, isEditable}){
     return (
       <tr>
-          <td>{isEditable ? <input  difaultvalue={word}/> : word}</td>
-          <td>{isEditable ? <input difaulvalue={translation}/> : translation}</td>
-          <td>{isEditable ? <input difaulvalue={transcription}/> : transcription}</td>
+          <td>{isEditable ? <input  deafultValue={word}/> : word}</td>
+          <td>{isEditable ? <input deafultValue={translation}/> : translation}</td>
+          <td>{isEditable ? <input deafultValue={transcription}/> : transcription}</td>
           <td>{topic}</td>
-          <td>
+          <td> 
             {isEditable ? <button>Seve</button> : null}
-            <button>Delite</button> 
-            <button>Edit</button>
+            {isEditable ? null : <button>Delite</button> }
+            {isEditable ? (<button onClick={onClick2}>Cenel</button>
+            ) : ( <button onClick={onClik}>Edit</button>)}
           </td>
         </tr>
     );
@@ -80,7 +67,7 @@ function WordList() {
       </thead>
       <tbody>{wordList}</tbody>
     </table>
-  );}
+  );}*/
 
 function App() {
   return (
@@ -93,3 +80,4 @@ function App() {
 }
 
 export default App;
+
