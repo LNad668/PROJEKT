@@ -1,5 +1,7 @@
 import style from './cardWord.module.css';
 import React, { useState } from 'react';
+import Button from './buten';
+
 
 const {cardWord} = style;
 
@@ -7,7 +9,8 @@ function Card({word,transcription,translation}) {
 const [isFront, chengeFront] = useState(true)
 
 function Clik(){
-    chengeFront(!isFront) 
+    chengeFront(!isFront) ;
+    <Button/>
 }
     if (isFront){
     return <div className={cardWord}>{word} <button onClick={Clik}>перевернуть</button></div>;
@@ -15,6 +18,7 @@ function Clik(){
     return <div className={cardWord}>{translation}  {transcription} <button onClick={Clik}>перевернуть</button></div> ;
     }
 }
+
 /*class Button extends Comment(){
     constructor(props){
         super(props);
