@@ -7,22 +7,20 @@ function Word ({ word, transcription, translation, topic}){
   const [isEditable, chengeEditable] = useState(false); 
 
   function onClik(){
-    chengeEditable (true);
+    chengeEditable (!isEditable) ;
   }
-  function onClick2(){
-    chengeEditable(false)
-  }
+  
 
     return (
       <tr>
-          <td>{isEditable ? <input  deafultValue={word}/> : word}</td>
-          <td>{isEditable ? <input deafultValue={translation}/> : translation}</td>
-          <td>{isEditable ? <input deafultValue={transcription}/> : transcription}</td>
+          <td>{isEditable ? <input  Value={word}/> : word}</td>
+          <td>{isEditable ? <input Value={translation}/> : translation}</td>
+          <td>{isEditable ? <input Value={transcription}/> : transcription}</td>
           <td>{topic}</td>
           <td> 
             {isEditable ? <button>Seve</button> : null}
             {isEditable ? null : <button>Delite</button> }
-            {isEditable ? (<button onClick={onClick2}>Cenel</button>
+            {isEditable ? (<button onClick={onClik}>Cenel</button>
             ) : ( <button onClick={onClik}>Edit</button>)}
           </td>
         </tr>

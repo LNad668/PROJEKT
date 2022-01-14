@@ -7,6 +7,7 @@ import Card from './components/cardWord';
 import data from './components/data';
 import WordList from './components/wordList';
 
+
 import { useState } from 'react';
 
  function Main() {
