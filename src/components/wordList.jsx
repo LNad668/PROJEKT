@@ -2,15 +2,14 @@ import React from "react";
 import data from "./data";
 import Word from "./word";
 
-function WordList() {
+
+export default function WordList() {
   const wordList = data.map((item) => {
   return <Word key={item.word} {...item} />;
 }
   )
 
   return (
-
-    
     <table border="2">
       <thead>
         <tr>
@@ -25,4 +24,4 @@ function WordList() {
     </table>
   );}
 
-  export default WordList
+  

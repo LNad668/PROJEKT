@@ -3,28 +3,28 @@ import data from "./data";
 import { useState } from 'react';
 
 
-function Word ({ word, transcription, translation, topic}){
+function Word ({ english, transcription, russian, topic}){
   const [isEditable, chengeEditable] = useState(false); 
 
-  const [words, setWord] = useState({ word,translation,transcription,topic })
+  const [words, setWord] = useState({ english,russian,transcription,topic })
 
   function onClik(){
     chengeEditable (true) ;
   }
 
-function onChengeWord(evt){
+function onChengeEnglish(evt){
   setWord({
-      word: evt.target.value,
-      translation: words.translation,
+    english: evt.target.value,
+    russian: words.russian,
       transcription: words.transcription,
       topic: words.topic,
   });
 }
 
-function onChengeTranslation(evt){
+function onChengeRussian(evt){
   setWord({
-    word: words.word,
-      translation: evt.target.value,
+    english: words.english,
+    russian: evt.target.value,
       transcription: words.transcription,
       topic: words.topic,
   });
@@ -32,8 +32,8 @@ function onChengeTranslation(evt){
 
 function onChengeTranscription(evt){
   setWord({
-    word: words.word,
-      translation: words.translation,
+    english: words.english,
+    russian: words.russian,
       transcription: evt.target.value,
       topic: words.topic,
   });
@@ -41,8 +41,8 @@ function onChengeTranscription(evt){
 
 function onChengeTopic(evt){
   setWord({
-    word: words.word,
-      translation: words.translation,
+    english: words.english,
+    russian: words.russian,
       transcription: words.transcription,
       topic: evt.target.value,
   });
@@ -54,8 +54,8 @@ function onSave(){
 
 function onCansel(){
   setWord({
-    word,
-    translation,
+    english,
+    russian,
     transcription,
     topic,
   });
@@ -66,8 +66,8 @@ function onCansel(){
 if (!isEditable){
   return(
     <tr>
-    <td>{words.word}</td>
-    <td>{words.translation}</td>
+    <td>{words.english}</td>
+    <td>{words.russian}</td>
     <td>{words.transcription}</td>
     <td>{words.topic}</td>
     <td>
@@ -79,8 +79,8 @@ if (!isEditable){
 } else {
   return(
   <tr>
-    <td><input Value={words.word} onChange={onChengeWord}/></td>
-    <td><input Value={words.translation} onChange={onChengeTranslation}/></td>
+    <td><input Value={words.english} onChange={onChengeEnglish}/></td>
+    <td><input Value={words.russian} onChange={onChengeRussian}/></td>
     <td><input Value={words.transcription} onChange={onChengeTranscription}/></td>
     <td><input Value={words.topic} onChange={onChengeTopic} ></input></td>
     <td>
@@ -92,5 +92,4 @@ if (!isEditable){
 }
 }
 
-  
   export default Word

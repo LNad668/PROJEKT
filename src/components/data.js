@@ -1,34 +1,33 @@
 export default [
     {
-      word: 'Sun',
+        english: 'Sun',
       transcription:'[sʌn]',
-      translation:'Солнце',
+      russian:'Солнце',
       topic:'погода',
-      isEditable:true
     },
     {
-        word: 'zebra',
+        english: 'zebra',
         transcription:'[ˈziː.brə]',
-        translation:'зебра',
+        russian:'зебра',
         topic:'животное',
         isEditable:false
     },
     {
-        word: 'car',
+        english: 'car',
         transcription:'[kɑːr]',
-        translation:'машина',
+        russian:'машина',
         topic:'техника'
     },
     {
-        word: 'rainbow ',
+        english: 'rainbow ',
         transcription:'[ˈreɪn.bəʊ]',
-        translation:'радуга',
+        russian:'радуга',
         topic:'погода'
     },
     {
-        word: 'rainbow ',
+        english: 'rainbow ',
         transcription:'[ˈreɪn.bəʊ]',
-        translation:'радуга',
+        russian:'радуга',
         topic:'погода',
         isEditable:true
     }
