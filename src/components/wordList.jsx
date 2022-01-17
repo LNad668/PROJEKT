@@ -9,6 +9,8 @@ function WordList() {
   )
 
   return (
+
+    
     <table border="2">
       <thead>
         <tr>
