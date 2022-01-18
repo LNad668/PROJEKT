@@ -3,6 +3,7 @@ import data from './data';
 import WordList from "./wordList";
 import style from './main.module.css'
 import CardList from "./cardList";
+import NoMatch from "./NoMatch";
 
 const {main} = style;
 
