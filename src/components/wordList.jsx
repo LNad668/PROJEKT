@@ -5,7 +5,7 @@ import Word from "./word";
 
 export default function WordList() {
   const wordList = data.map((item) => {
-  return <Word key={item.word} {...item} />;
+  return <Word key={item.id} {...item} />;
 }
   )
 

@@ -11,7 +11,7 @@ export default function Main() {
         <div className={main}>
         <h3>Список слов</h3>
         <WordList/>
-        <CardList data={data}/>
+        <CardList data={data} />
         </div>
     );
     }  

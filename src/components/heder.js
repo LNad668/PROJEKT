@@ -14,14 +14,14 @@ function Heder() {
     <>
     <Router>
     <Link to= "/WordList">Список слов</Link>
-    <Link to= "/CardList">Тренировка </Link>
+    <Link to= "/Card">Тренировка </Link>
     <a href='#'>Список по теме </a>
   
 <h1>Заголовок Сайта </h1>
 
         <Routes>
           <Route exact path="/wordList" element={<WordList />} />
-          <Route exact path="/CardLict" element={<CardList />} />
+          <Route exact path="/Card" element={<Card  />} />
         </Routes>
         
     </Router>
