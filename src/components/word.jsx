@@ -1,5 +1,4 @@
 import React from "react";
-import data from "./data";
 import { useState } from 'react';
 
 
@@ -64,7 +63,7 @@ function onCansel(){
 }
 
 if (!isEditable){
-  return(
+  return(  
     <tr>
     <td>{words.english}</td>
     <td>{words.russian}</td>

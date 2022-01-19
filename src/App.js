@@ -7,9 +7,8 @@ import Main from './components/main';
 function App() {
   return (
   <>
-    <Heder/>
+    
     <Main/>
-    <Footer/>
   </>
   );
 }
