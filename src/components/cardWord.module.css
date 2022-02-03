@@ -6,7 +6,7 @@
     margin: 0 auto;
     font-family: Verdana, Arial, Helvetica, sans-serif; 
     font-size:30px;
-    border: rgb(173, 115, 221) solid 3px;
+    border: red solid 3px;
     border-radius: 20px;
     display: grid;
     align-items: center;
