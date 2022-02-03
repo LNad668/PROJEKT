@@ -1,11 +1,8 @@
 import Card from "./card"
 import { useState } from "react"
-
 import style from './cardWord.module.css';
 
-
-
-const {cardWord} = style;
+const {stylbutton, card_list, cardWord} = style;
 
 export default function CardList({ data }){
         const [index, setIndex ] = useState(0);
@@ -23,13 +20,15 @@ if (index === data.length){
     );
 } else {
     return(
-        <div className="card-list">
-            <Card {...data[index]}/>
+        <div className={card_list}>
+            <Card {...data[index]} />
+            
             {
-                index > 0 && <button onClick={onBack}>Предыдущие</button>
+                index > 0 && <button className={stylbutton} onClick={onBack}>Предыдущие</button>
             }
-            {index +1}/{data.length}
-            <button onClick={onNext}>Следующие</button>
+                {index +1}/{data.length} 
+            <button className={stylbutton} onClick={onNext}>Следующие</button>    
+           
         </div>
     )}
 }

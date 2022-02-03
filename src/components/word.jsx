@@ -78,10 +78,10 @@ if (!isEditable){
 } else {
   return(
   <tr>
-    <td><input Value={words.english} onChange={onChengeEnglish}/></td>
-    <td><input Value={words.russian} onChange={onChengeRussian}/></td>
-    <td><input Value={words.transcription} onChange={onChengeTranscription}/></td>
-    <td><input Value={words.topic} onChange={onChengeTopic} ></input></td>
+    <td><input value={words.english} onChange={onChengeEnglish}/></td>
+    <td><input value={words.russian} onChange={onChengeRussian}/></td>
+    <td><input value={words.transcription} onChange={onChengeTranscription}/></td>
+    <td><input value={words.topic} onChange={onChengeTopic} ></input></td>
     <td>
       <button onClick={onSave}>Save</button>
       <button onClick={onCansel}>Cancel</button>

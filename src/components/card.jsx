@@ -1,25 +1,34 @@
 import style from './cardWord.module.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import CardList from './cardList';
+
 
 
 const {cardWord} = style;
 
-function Card({english,transcription,russian, id}) {
-const [isFront, setIsFront] = useState(true)
+export default function Card({ english,transcription,russian, id}) {
 
+    const [isFront, setIsFront] = useState(true)
 
-function Clik(){
-    setIsFront(!isFront)  
-}
+    const ref = useRef(null);
+    useRef(() =>{
+        if (ref.current){
+            ref.current.focus();
+        }
+    });
 
-useEffect (() => {
-    setIsFront(true);}, [id]);
+    function Clik(){
+    setIsFront(!isFront)  ;
+   //addCheckedWords();
+    }
+        useEffect (() => {
+        setIsFront(true);}, [id]);
 
     if (isFront){
-    return <div className={cardWord}>{english} <button onClick={Clik}>перевернуть</button></div>;
+    return <div className={cardWord} >{english} <button onClick={Clik} ref={ref}>Проверить</button></div>;
     } else {
-    return <div className={cardWord}>{russian}  {transcription} <button onClick={Clik}>перевернуть</button></div> ;
+    return <div className={cardWord}>{russian}  {transcription} </div> ; //<button onClick={Clik}>Назад</button>
     }
 }
 
-    export default Card
+   

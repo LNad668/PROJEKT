@@ -10,29 +10,37 @@ import CardList from "./cardList";
 import data from "./data";
 import NoMatch from "./NoMatch";
 import Home from "./home";
+import style from "./heder.module.css";
+
+
+const {styleheder,stylbody} = style;
 
 function Heder() {
     return (
-    <>
-    <Router>
-    <Link to= "/Home">
-        <img  src="https://img.icons8.com/nolan/64/school.png"/></Link>
-    <Link to= "/WordList">Список слов</Link>
-    <Link to= "/CardList">Тренировка </Link>
+    < div>
+    <Router className={styleheder}>
     
-    <Link to='#'>Список по теме </Link>
+    <Link className={styleheder} to= "/Home">
+        <img  src="https://img.icons8.com/nolan/64/school.png"/></Link>
+    <Link className={styleheder} to= "/Home">Список слов</Link>
+    <Link className={styleheder} to= "/CardList">Тренировка </Link>
+    
+    <Link className={styleheder} to='EROR'>Список по теме </Link>
+    
 
-        <Routes>
-          <Route exact path="/wordList" element={<WordList />} />
-          <Route exact path="/CardList" element={<CardList data={data} />} />
-          <Route exact path="/Home" element={<Home />} />
-
-          <Route path="*" element={<NoMatch />} />
+        <Routes >
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="/Home" element={<Home />} />
+            </Route>
+          <Route  exact path="/CardList" element={<CardList data={data} />} />
+          
+          <Route  path="*" element={<NoMatch />} />
         </Routes>
         
     </Router>
     
-    </>
+    </div>
     );
   }
 

@@ -1,12 +1,25 @@
 
 .cardWord {
-    width: 150px;
-    height: 300px;
-    margin: 5px;
+    width: 225px;
+    height: 350px;
+    padding: 5px;
+    margin: 0 auto;
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size:30px;
     border: rgb(173, 115, 221) solid 3px;
     border-radius: 20px;
     display: grid;
     align-items: center;
     text-align: center;
+  }
+  .card_list{
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    
+  }
 
+  .stylbutton{
+    margin: 20px 0;
   }
